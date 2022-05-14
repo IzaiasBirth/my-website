@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+
+    <head>
+        <!-- Metadados -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="formulario.css" media="screen">
+
+        <!-- Título da página (aparece na aba) -->
+        <title>Cadastro</title>
+    </head>
+
+    <body>  
+
+        <!-- Cabeçalho com título e subtítulo (ambos com css de id "titulo") -->
+        <div>
+            <h1 id="titulo">SOLICITAÇÃO DE SERVIÇO</h1>
+            <p id="subtitulo">Preencha as informações abaixo</p>
+            <br>
+        </div>
+
+        <!-- Início do formulário -->
+        <form>
+
+            <fieldset class="grupo">
+                <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
+                <div class="campo">
+                    <label for="nome"><strong>Nome</strong></label>
+                    <input type="text" name="nome" id="nome" required>
+                </div>
+
+                <!-- Campo do sobrenome com legenda "sobrenome" e css de classe "campo" -->
+                <div class="campo">
+                    <label for="sobrenome"><strong>Sobrenome</strong></label>
+                    <input type="text" name="sobrenome" id="sobrenome" required>
+                </div>
+            </fieldset> 
+
+            <!-- Campo de email com-->
+            <div class="campo">
+                <label for="email"><strong>Email</strong></label>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+            <!-- Campo de dispositivo com 3 opções de botões selecionáveis (radio button) e css de classe "campo" -->
+            <div class="campo">
+                <label><strong>Que tipo de sistema você possui?</strong></label>
+                <label>
+                    <input type="radio" name="dispositivo" value="CFTV - Câmeras" checked>CFTV - Câmeras
+                </label>
+                <label>
+                    <input type="radio" name="dispositivo" value="Alarme">Alarme
+                </label>
+                <label>
+                    <input type="radio" name="dispositivo" value="Cerca elétrica">Cerca elétrica
+                </label>
+            </div>
+
+            <!-- Campo de período com 3 opções para escolha (select option) e css de classe "campo" -->
+            <div class="campo">
+                <label for="periodo"><strong>Melhor turno para atendimento</strong></label>
+                <select id="periodo" required>
+                  <option selected disabled value="">Selecione</option>
+                  <option>Manhã</option>
+                  <option>Tarde</option>
+                  <option>Noite</option>
+                </select>
+            </div>
+
+            <fieldset class="grupo">
+                <!-- Campo de equipamentos para escolha de 1 ou mais opções para marcar (checkbox) e css de classe "campo" -->
+                <div id="check">
+                    <label><strong>Selecione qual o tipo de equipamento deseja atendimento:</strong></label><br><br>
+                    <input type="checkbox" id="equipamento1" name="equipamento1" value="dvr/nvr">
+                    <label for="equipamento1"> DVR/NVR</label>
+                    <input type="checkbox" id="equipamento2" name="equipamento2" value="camera">
+                    <label for="equipamento2"> CÂMERA</label>
+                    <input type="checkbox" id="equipamento3" name="equipamento3" value="central">
+                    <label for="equipamento3"> CENTRAL</label>
+                    <input type="checkbox" id="equipamento4" name="equipamento4" value="cerca">
+                    <label for="equipamento4"> CERCA</label>
+                    <input type="checkbox" id="equipamento5" name="equipamento5" value="portao">
+                    <label for="equipamento5"> PORTÃO</label>
+                    <input type="checkbox" id="equipamento6" name="equipamento6" value="catraca">
+                    <label for="equipamento6"> CATRACA</label>
+                    <input type="checkbox" id="equipamento7" name="equipamento7" value="outros">
+                    <label for="equipamento7"> OUTROS</label>
+                </div>
+            </fieldset>
+
+            <!-- Caixa de texto -->
+            <div class="campo">
+                <br>
+                <label for="experiencia"><strong>Conte sobre o serviço que deseja: </strong></label>
+                <textarea rows="6" style="width: 26em" id="experiencia" name="experiencia"></textarea>
+            </div>
+
+            <!-- Botão para enviar o formulário -->
+            <button class="botao" type="submit" onsubmit="">Concluído</button>            
+
+        </form>
+
+    </body>
+
+</html>
+
+
+
+
